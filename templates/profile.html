@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughtify - Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Thoughtify</h1>
+        <nav>
+            <a href="{{ url_for('home') }}" class="btn">Home</a>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Your Profile</h1>
+
+            {% if session.get('token') %}
+                <p><strong>Display Name:</strong> {{ user_data.display_name }}</p>
+                <p><strong>Spotify URL:</strong> <a href="{{ user_data.external_urls.spotify }}" target="_blank">{{ user_data.external_urls.spotify }}</a></p>
+                <p><strong>Followers:</strong> {{ user_data.followers.total }}</p>
+            {% else %}
+                <p>You are not logged in. <a href="{{ url_for('login') }}" class="btn">Login with Spotify</a></p>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

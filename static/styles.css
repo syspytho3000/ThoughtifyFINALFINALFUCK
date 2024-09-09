@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+    color: hotpink;
+    font-family: 'Arial', sans-serif;
+}
+
+header, footer {
+    background-color: black;
+    color: hotpink;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: hotpink;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid hotpink;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: transparent;
+    border: 2px solid hotpink;
+    border-radius: 10px;
+    text-align: left;
+    color: hotpink;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: hotpink;
+}
+
+main h1 {
+    color: hotpink;
+    font-size: 2em;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: hotpink;
+}
+
+.btn {
+    background-color: transparent;
+    color: hotpink;
+    padding: 10px 20px;
+    border: 2px solid hotpink;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: hotpink;
+    color: black;
+}
+
+.playlist-container {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid hotpink;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    color: hotpink;
+}
+
+a {
+    color: hotpink;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: hotpink;
+    border: 2px solid hotpink;
+}
+
+#playlist {
+    background-color: hotpink;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#playlist h2, #playlist p, #playlist a {
+    color: black;
+}
+
+#playlist a:hover {
+    color: hotpink;
+}

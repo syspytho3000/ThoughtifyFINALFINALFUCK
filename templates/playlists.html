@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Your Playlists</h1>
+        <nav>
+            <a href="{{ url_for('home') }}" class="btn">Home</a>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <ul>
+            {% for playlist in playlists %}
+            <li>
+                <a href="{{ url_for('playlist', playlist_id=playlist['id']) }}" class="playlist-link">{{ playlist['name'] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>

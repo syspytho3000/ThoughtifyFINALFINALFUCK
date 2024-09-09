@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Thoughtify</h1>
+        <nav>
+            <a href="{{ url_for('playlists') }}" class="btn">Playlists</a>
+            <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>Welcome, {{ user_data['display_name'] }}</h2>
+        </section>
+        <section class="thought-form">
+            <!-- Form remains here, but we won't process thoughts in the backend -->
+            <form action="{{ url_for('leave_thought') }}" method="post">
+                <textarea name="thought" placeholder="Share your thoughts..." required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
